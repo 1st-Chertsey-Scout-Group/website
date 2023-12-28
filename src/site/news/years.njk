@@ -1,0 +1,22 @@
+---
+permalink: "news/{{ year.year }}/index.html"
+layout: news-page
+subtitle: ""
+pagination:
+    data: collections.newsYear
+    size: 1
+    alias: year
+    addAllPagesToCollections: true
+
+eleventyComputed:
+    title: "{{ year.year }}"
+    eleventyNavigation:
+      key: "news-{{ year.year }}"
+      parent: news
+      title: "{{ year.year }}"
+---
+
+
+  {% for article in year.articles | reverse %}
+    {% include "news/brief.njk" %}
+  {% endfor %}

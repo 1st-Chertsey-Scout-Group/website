@@ -1,0 +1,39 @@
+---
+layout: page
+---
+
+
+<div id="hero-image" class="d-flex text-center text-white" style="background-image: url('/assets/images/hq-cover-photo.jpg');">
+    <div class="cover-container d-flex w-100 h-100 flex-column align-items-center justify-content-center">  
+        <img src="/assets/images/badges/group-badge.png" class="p-3" style="width: 300px;">
+        <main>
+            <div class="py-3 px-5">
+                <h1>1st Chertsey Scout Group</h1>
+                <div class="h2">Home of Scouting in Chertsey</div>
+            </div>
+
+
+          <div class="btn-group btn-group-lg w-100" role="group">
+            <a href="/sections" class="rounded-0 btn btn-primary">Sections</a>
+            <a href="/about-us/get-in-touch" class="rounded-0 btn btn-secondary">Contact</a>
+          </div>
+        </main>
+      </div>
+</div>
+<div id="group-news">
+  <div class="divider">
+
+  </div>
+  <div class="container" class="pt-6">
+    <div class="title text-center py-3">
+      <h2>Group News</h2>
+      <div class="h5">All the latest 1st Chertsey Scout Group news</div>
+    </div>
+    <div class="news row">
+      {% set latestArticles = collections.news | reverse | limit(6) %}
+      {% for article in latestArticles %}
+        {% include "news/brief-tile.njk" %}
+      {% endfor %}
+    </div>
+  </div>
+</div>

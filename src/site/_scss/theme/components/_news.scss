@@ -1,0 +1,17 @@
+.news-thumbnail{
+    width: 200px;
+    background-position: center;
+    background-size: cover;
+}
+
+.news-thumbnail-tile{
+    height: 200px;
+    background-position: center;
+    background-size: cover;
+}
+
+.news-area{
+    p:first-child {
+        font-size: $h4-font-size;
+    }
+}

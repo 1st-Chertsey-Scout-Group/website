@@ -1,0 +1,22 @@
+
+{% if eleventyNavigation.parent == "sections" %}
+{% set navPages = collections.all | eleventyNavigation(eleventyNavigation.key) %}
+{% else %}
+{% set navPages = collections.all | eleventyNavigation(eleventyNavigation.parent) %}
+{% endif %}
+
+
+<div class="card bg-secondary mb-3">
+    <h4 class="card-header text-white">Also See</h4>
+    <ul class="list-group list-group-flush">
+        {% for page in navPages|sort(attribute="title") %}
+            {% if page.visible %}
+                <li class="list-group-item bg-transparent">
+                    <a class="link link-primary {% if page.key == eleventyNavigation.key %}active{% endif %}" href="{{page.url}}">
+                        {{page.title }}
+                    </a>
+                </li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+</div>

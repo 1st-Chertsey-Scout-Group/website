@@ -1,0 +1,19 @@
+#hero-image {
+    height: 75vh;
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: 40%;
+
+    main {
+        background: rgba(0, 0, 0, 0.7);
+
+        h1 {
+            font-weight: bold;
+        }
+    }
+}
+
+.divider{
+    background: $primary;
+    height: 10px;
+}

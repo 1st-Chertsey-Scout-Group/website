@@ -1,0 +1,41 @@
+---
+layout: page
+---
+
+<div id="breadcrumb" class="py-2">
+    <div class="container">
+        {% include "breadcrumb.njk" %}
+    </div>
+</div>
+{% if banner %}
+    <div id="img-banner" 
+    style="
+    {% if banner.image %}
+        background-image: url('{{banner.image}}');
+    {% endif %}
+    {% if banner.position %}
+        background-position: {{banner.position}};
+    {% endif %}
+    {% if banner.height %}
+        height: {{banner.height}};
+    {% endif %}
+     ">
+    </div>
+{% endif %}
+<div id="banner" class="bg-primary text-white py-4 mb-4">
+    <div class="container">
+        <h1>{{ title }}</h1>
+
+        {% if subtitle %}
+            <div class="subtitle">
+                {{ subtitle }}
+            </div>
+        {% endif %}
+    </div>
+</div>
+
+<main class="mb-4">
+    <div class="container">
+        {{ content | safe }}
+    </div>
+</main>

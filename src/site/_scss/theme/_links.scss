@@ -1,0 +1,6 @@
+a {
+    &.active{
+        font-weight: $font-weight-semibold;
+        color: darken($primary, 1) 
+    }
+}

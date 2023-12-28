@@ -1,0 +1,12 @@
+---
+layout: sub-page
+title: Site Map
+
+eleventyComputed:
+  eleventyNavigation:
+    key: site-map
+    parent: home
+    title: "{{ title }}"
+---
+
+{{ collections.all | eleventyNavigation | eleventyNavigationToHtml | safe }}
