@@ -1,0 +1,11 @@
+#breadcrumb{
+    background: $gray-200;
+
+    .breadcrumb-item {
+        &.active {
+            .item-text{
+                font-weight: $font-weight-semibold;
+            }          
+        }
+      }
+}

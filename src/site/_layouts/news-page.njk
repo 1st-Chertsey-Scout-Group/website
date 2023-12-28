@@ -1,0 +1,28 @@
+---
+layout: sub-page
+---
+
+<div class="row">
+    <div class="news-area col-md-9">
+        {{ content | safe }}
+    </div>
+    <div class="side col-md-3">
+        <div class="position-sticky" style="top: 2rem;">
+            <div class="row">
+            {% if not computed %}
+                <div class="col-12 col-sm-6 col-md-12">
+                    {% include "news/related.njk" %}
+                </div>
+            {% endif %}
+                <div class="col-12 {% if not computed %}col-sm-6{% endif %} col-md-12">
+                    {% include "news/latest.njk" %}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    {% include "news/archive.njk" %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

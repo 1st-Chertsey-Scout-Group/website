@@ -1,0 +1,37 @@
+.chertsey {
+  display: inline-block;
+  img {
+    height: 5em;
+  }
+}
+
+.navbar-brand {
+  .logo {
+    #symbols {
+      fill: $black;
+    }
+  }
+  .sub {
+    font-weight: 600;
+    color: $black;
+    margin-top: -10px;
+    margin-bottom: 0px;
+    font-size: 0.72em;
+  }
+}
+
+.navbar-content{
+  .navbar-nav{
+    .nav-item{
+      .nav-link{
+        &.active{
+          color: var(--bs-breadcrumb-item-active-color);
+        }
+      }
+    }
+  }
+}
+
+.navbar{
+  background: white;
+}

@@ -1,0 +1,41 @@
+.card {
+
+  border-radius: 0px;
+  border: none;
+  background-color: $gray-200;
+
+
+  
+  &.bg-squirrels {
+    background-color: $squirrels;
+  }
+
+  &.bg-beavers {
+    background-color: $beavers;
+  }
+
+  &.bg-cubs {
+    background-color: $cubs;
+  }
+
+  &.bg-scouts {
+    background-color: $scouts;
+  }
+
+  &.bg-explorers {
+    background-color: $explorers;
+  }
+
+  .list-group-item{
+    border-bottom-color: transparent
+  }
+
+  .card-header{
+    border-radius: 0px;
+    background-color: $primary;
+
+      svg{
+          height: 75px;
+      }
+  }
+}

@@ -1,0 +1,65 @@
+<nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container">
+        <a class="navbar-brand" href="/">
+            <div class="logo">
+                {% include "svg/logos/scouting.njk" %}
+            </div>
+            <p class="sub">
+                1st Chertsey
+            </p>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar-content">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+
+                <li class="nav-item px-1">
+                    <a class="nav-link {% if '/sections/squirrels' in page.url %}active{% endif %}" href="/sections/squirrels">Squirrels</a>
+                </li>
+
+                <li class="nav-item px-1">
+                    <a class="nav-link {% if '/sections/beavers' in page.url %}active{% endif %}" href="/sections/beavers">Beavers</a>
+                </li>
+
+                <li class="nav-item px-1">
+                    <a class="nav-link {% if '/sections/cubs' in page.url %}active{% endif %}" href="/sections/cubs">Cubs</a>
+                </li>
+
+                <li class="nav-item px-1">
+                    <a class="nav-link {% if '/sections/scouts' in page.url %}active{% endif %}" href="/sections/scouts">Scouts</a>
+                </li>
+
+                <li class="nav-item px-1">
+                    <a class="nav-link {% if '/sections/explorers' in page.url %}active{% endif %}" href="/sections/explorers">Explorers</a>
+                </li>
+
+                <li class="nav-item px-1">
+                    <a class="btn btn-primary text-white" href="https://www.justgiving.com/chertseyscouts" role="button" target="_blank">Donate</a>
+                </li>
+                <li class="nav-item px-1 dropdown">
+                    <a class="nav-link dropdown-toggle {% if '/about-us' in page.url %}active{% endif %}" href="#" id="ddlAboutUs" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        About Us
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="ddlAboutUs">
+                        <li>
+                            <a class="dropdown-item" href="/about-us/our-group">Our Group</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="/about-us/our-history">Our History</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="/about-us/find-us">Find Us</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="/about-us/get-in-touch">Get in touch</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item px-1">
+                    <a class="nav-link {% if '/news' in page.url %}active{% endif %}" href="/news">News</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

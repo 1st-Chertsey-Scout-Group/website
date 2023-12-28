@@ -1,0 +1,20 @@
+---
+layout: sub-page
+title: Sections
+
+eleventyComputed:
+  eleventyNavigation:
+    key: sections
+    parent: home
+    title: "{{ title }}"
+---
+
+{% import 'sections/macro-section-card.njk' as section %}
+
+<div class="row justify-content-center">
+  {{ section.card("squirrels") }}
+  {{ section.card("beavers")}}
+  {{ section.card("cubs") }}
+  {{ section.card("scouts") }}
+  {{ section.card("explorers") }}
+</div>

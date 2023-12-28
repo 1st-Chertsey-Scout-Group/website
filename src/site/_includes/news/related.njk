@@ -1,0 +1,5 @@
+{% set cardArticles = collections.news | findRelated(eleventyNavigation.key, tags) | reverse | limit(4) %}
+{% set cardTitle = "Related News" %}
+{% if cardArticles | length %}
+    {% include "news/news-card.njk" %}
+{% endif %}

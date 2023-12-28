@@ -1,0 +1,10 @@
+{% macro card(title, reverse) %}
+
+  {% set id = title | lowercase %}
+
+  <a class="col col-12 col-sm-6 col-md-4 d-flex justify-content-center p-2" href="/sections/{{id}}">
+    <img class="rounded img-fluid" src="/assets/images/sections/tile/{{id}}.png" alt="{{title}}">
+  </a>
+  
+
+{% endmacro %}

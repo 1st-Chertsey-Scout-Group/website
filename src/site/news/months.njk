@@ -1,0 +1,21 @@
+---
+permalink: "news/{{ month.year }}/{{ month.month | pad }}/index.html"
+layout: news-page
+subtitle: ""
+pagination:
+    data: collections.newsMonth
+    size: 1
+    alias: month
+    addAllPagesToCollections: true
+
+eleventyComputed:
+    title: "{{ (month.month - 1) | month }} {{ month.year }}"
+    eleventyNavigation:
+      key: "news-{{ month.year }}-{{ month.month | pad }}"
+      parent: "news-{{ month.year }}"
+      title: "{{ (month.month - 1) | month }}"
+---
+
+{% for article in month.articles | reverse %}
+  {% include "news/brief.njk" %}
+{% endfor %}

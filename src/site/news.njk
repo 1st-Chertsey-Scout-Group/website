@@ -1,0 +1,15 @@
+---
+layout: news-page
+title: News
+
+eleventyComputed:
+  eleventyNavigation:
+    key: news
+    parent: home
+    title: "{{ title }}"
+---
+
+{% set latestArticles = collections.news | reverse | limit(8) %}
+{% for article in latestArticles %}
+  {% include "news/brief.njk" %}
+{% endfor %}

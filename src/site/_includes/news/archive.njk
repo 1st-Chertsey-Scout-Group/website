@@ -1,0 +1,11 @@
+<div class="archives card mb-3 text-white bg-secondary mb-3">
+    <h4 class="card-header">From the Archives…</h4>
+    <ul class="list-group list-group-flush">
+        {% for year in collections.newsYear | reverse %}
+            <li class="list-group-item bg-transparent">
+                <a href="/news/{{year.year}}">{{year.year}}</a>
+                ({{year.articles | length}})
+            </li>
+        {% endfor %}
+    </ul>
+</div>

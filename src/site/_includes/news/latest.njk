@@ -1,0 +1,5 @@
+{% set cardArticles = collections.news | reverse | limit(4) %}
+{% set cardTitle = "Latest News" %}
+{% if cardArticles | length %}
+    {% include "news/news-card.njk" %}
+{% endif %}

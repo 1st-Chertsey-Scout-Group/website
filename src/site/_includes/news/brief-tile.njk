@@ -1,0 +1,19 @@
+<div class="col-12 col-md-6 col-lg-4">
+    <div class="border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="news-thumbnail-tile" style="background-image: url({{article.data.thumbnail}})">
+        </div>
+        <div class="col p-4 d-flex flex-column position-static">
+            <strong class="d-inline-block mb-2 text-primary">
+                {% for tag in article.data.tags %}
+                <span class="badge rounded-pill bg-primary">{{ tag }}</span>                
+                {% endfor %}
+            </strong>
+            <h3 class="mb-0" style="height: 33px; overflow: hidden;">{{article.data.title}}</h3>
+            <div class="mb-1 text-muted">{{article.date | dateFormat("dS mmmm yyyy") }} | {{article | readingTime }} read</div>
+            <p class="card-text mb-auto" style="height: 120px; overflow: hidden;">{% excerpt article %}</p>
+            <div>
+                    <a href="{{ article.url }}" class="mt-3 btn btn-primary text-white stretched-link">Continue reading</a>
+            </div>
+        </div>
+    </div>
+</div>

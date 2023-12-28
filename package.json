@@ -1,0 +1,51 @@
+{
+    "name": "website-template",
+    "version": "1.0.0",
+    "description": "",
+    "main": "",
+    "scripts": {
+      "serve:eleventy": "npx @11ty/eleventy --serve",
+      "serve:sass": "npx sass src/site/_scss:dist/assets/css --watch",
+      "serve": "concurrently 'npm:serve:eleventy' 'npm:serve:sass'",
+      "build:eleventy": "npx @11ty/eleventy",
+      "build:sass": "npx sass src/site/_scss:dist/assets/css --style=compressed --no-source-map",
+      "build": "npm run build:eleventy && npm run build:sass"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/1st-Chertsey-Scout-Group/Website-Template.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/1st-Chertsey-Scout-Group/Website-Template/issues"
+    },
+    "homepage": "https://github.com/1st-Chertsey-Scout-Group/Website-Template#readme",
+    "devDependencies": {
+      "@11ty/eleventy": "^1.0.2",
+      "@11ty/eleventy-navigation": "^0.3.2",
+      "client-oauth2": "^4.3.3",
+      "concurrently": "^7.6.0",
+      "dateformat": "^4.5.1",
+      "dotenv": "^16.0.0",
+      "eleventy-plugin-reading-time": "0.0.1",
+      "markdown-it": "^12.3.2",
+      "markdown-it-anchor": "^8.6.7",
+      "markdown-it-attrs": "^4.1.3",
+      "markdown-it-emoji": "^2.0.0",
+      "markdown-it-link-attributes": "^4.0.0",
+      "markdown-it-video": "^0.6.3",
+      "sass": "^1.57.1",
+      "striptags": "^3.2.0"
+    },
+    "dependencies": {
+      "bootstrap": "^5.1.3",
+      "bootstrap-icons": "^1.8.1",
+      "jquery": "^3.6.0",
+      "popper.js": "^1.16.1",
+      "serve": "^14.2.0",
+      "string": "^3.3.3"
+    }
+  }
+  
