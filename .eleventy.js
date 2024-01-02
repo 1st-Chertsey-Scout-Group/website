@@ -22,7 +22,7 @@ module.exports = function (config) {
 
 
   // Global data
-  config.addGlobalData("websiteUrl", "http://localhost:8080");
+  config.addGlobalData("websiteUrl", "https://1stchertseyscoutgroup.com");
 
 
   // Markdown engine with its plugins
@@ -32,6 +32,7 @@ module.exports = function (config) {
 
   config.addPassthroughCopy({
     "src/public/": "./",
+    "src/site/admin/config.yml": "./admin/config.yml",
     "src/site/content/_assets": "./assets",
     "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js":
       "assets/js/bootstrap.bundle.min.js",
